@@ -38,7 +38,7 @@ class AppFixtures extends Fixture
             $offre = $this->createOffre(
                 $faker->jobTitle(),
                 $faker->paragraph(3),
-                $faker->randomFloat(6, 0, 9999),
+                $faker->randomFloat(2, 0, 9999),
                 $this->randomService($manager),
                 $this->randomTags($manager)
             );
