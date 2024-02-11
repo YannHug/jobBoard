@@ -7,25 +7,6 @@
         <h1 class="text-4xl text-center">Formulaire</h1>
     </div>
     <div class="container mx-auto m-4 p-4 bg-blue-100">
-        <form action="{{ path('app_job_new') }}" method="POST">
-            <input
-                    type="hidden"
-                    name="token"
-                    value="{{ csrf_token('test-token') }}"
-            >
-            <p>
-                <input type="text" name="Nom" placeholder="Nom de l'offre"
-                       class="border-2 border-blue-500 rounded-lg p-2">
-            </p>
-            <p>
-                <textarea name="Description" placeholder="Description"
-                          class="border-2 border-blue-500 rounded-lg p-2"></textarea>
-            </p>
-            <button class="bg-blue-500 p-1">Envoyer</button>
-        </form>
-    </div>
-    <div class="container mx-auto m-4 p-4 bg-pink-100">
-        <p>{{ nom }}</p>
-        <p>{{ description }}</p>
+        {{ form(form) }}
     </div>
 {% endblock %}
